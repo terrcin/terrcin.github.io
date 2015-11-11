@@ -7,8 +7,8 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            terrcin.tv
-tagline:          'Get it working, then make it better'
+title:            'Get it working, then make it better'
+tagline:          ''
 description:      'Enter some sort of proper description here! Made by <a href="https://twitter.com/terrcin" target="_blank">@terrcin</a>.'
 url:              http://terrcin.nz
 baseurl:          /
