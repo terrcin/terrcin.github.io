@@ -26,6 +26,17 @@
         {% endif %}
       {% endfor %}
 
+      <span class="sidebar-nav-item">Projects</span>
+
+      {% assign projects_list = site.pages %}
+      {% for node in projects_list %}
+        {% if node.title != null %}
+          {% if node.layout == "project" %}
+            <a class="sidebar-nav-item{% if project.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
     </nav>
 
     <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
