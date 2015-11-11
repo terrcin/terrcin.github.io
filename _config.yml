@@ -4,7 +4,7 @@ highlighter:      pygments
 
 # Permalinks
 permalink:        pretty
-relative_permalinks: true
+relative_permalinks: false
 
 # Setup
 title:            'Get it working, then make it better.'
@@ -18,3 +18,5 @@ author:
   url:            https://twitter.com/terrcin
 
 paginate:         5
+
+gems: [jekyll-paginate]
