@@ -71,9 +71,9 @@ defmodule MyApp.Repo.Migrations.AddUuidExtension do
 end
 {% endhighlight %}
 
-To then get Ecto in Phoenix using database generated UUIDs isn't straight forward as it doesn't support this, only client side generation is. Reading the [Ecto.Schema](http://hexdocs.pm/ecto/Ecto.Schema.html#content) docs shows how straight forward is it to switch the default primary and foreign key types to `:uuid`. After a bit of research you can get database generated primary keys used, but it's a bit of a hack.
+To then get Ecto in Phoenix using database generated UUIDs isn't straight forward as it doesn't support this, only client side generation is. After a bit of research I've found you can get database generated primary keys used, but it's a bit of a hack.
 
-The primary problem is that this line in `MyApp.Web.Model` will cause Ecto to generate the primary_key client side and send that in the `insert` statements:
+Reading the [Ecto.Schema](http://hexdocs.pm/ecto/Ecto.Schema.html#content) docs shows how straight forward is it to switch the default primary and foreign key types to `:uuid`. The problem is that this line in `MyApp.Web.Model` will cause Ecto to generate the primary_key client side and send that in the `insert` statements:
 
 {% highlight elixir %}
 @primary_key {:id, :binary_id, autogenerate: true}
