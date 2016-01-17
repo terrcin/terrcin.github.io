@@ -133,4 +133,4 @@ The `read_after_writes` option will not trigger a select but simply means the da
 {% endraw %}
 {% endhighlight %}
 
-The convention is to let the client generate the UUID as by their very nature it will be unique, but at this stage I'm going to stick with how the system I'm replacing works. It's not a great idea to immediately go against convention when learning something new, but in this case it's quite self contained and I sure did learn heaps trying to figure all this out.
+The convention is to let the client generate the UUID as by their very nature it will be unique, but at this stage I'm going to stick with how the system I'm replacing works. It's not a great idea to immediately go against convention when learning something new, but this hack is quite self contained, and I sure did learn heaps trying to figure all this out.
